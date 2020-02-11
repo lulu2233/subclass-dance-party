@@ -2,7 +2,7 @@ var makeHulkDancer = function(top, left, timeBetweenSteps) {
   // console.log('blinky', this);
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node = $('<span class="dancer hulkdancer"></span>');
+  this.$node = $('<span class="hulkdancer"></span>');
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
@@ -25,5 +25,9 @@ makeHulkDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
 
   this.top += 5;
+  // if (this.top >= screen.height) {
+  //   return;
+  // }
+
   this.setPosition(this.top, this.left);
 };

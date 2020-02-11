@@ -2,7 +2,7 @@ var makeBouncyDancer = function(top, left, timeBetweenSteps) {
   // console.log('blinky', this);
   makeDancer.call(this, top, left, timeBetweenSteps);
 
-  this.$node = $('<span class="dancer bouncydancer"></span>')
+  this.$node = $('<span class="bouncydancer"></span>');
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
@@ -23,6 +23,6 @@ makeBouncyDancer.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.toggle();
+  // this.$node.toggle();
   this.setPosition(this.top, this.left);
 };

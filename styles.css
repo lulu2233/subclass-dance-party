@@ -5,7 +5,7 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  background-image: url("stage-background.jpg");
+  background-image: url("image/stage-background.jpg");
   background-size: cover;
 }
 body, a:link, a:visited, a:active{
@@ -23,17 +23,33 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  display:block;
+  background: url("image/blinkydancer.png");
+  background-size: cover;
+  width:100px;
+  height:150px;
   position:absolute;
 }
 .hulkdancer{
-  border:30px solid green;
-  border-radius:6px;
+  display:block;
+  box-sizing:border-box;
+  background: url("image/hulkdancer.jpg");
+  background-size: cover;
+  width:100px;
+  height:150px;
   position:absolute;
 }
+/* @keyframes bounce {
+  0% {top: 200px; left: 100px}
+  50% {top: 150px; left: 100px}
+  100% {top: 50px; left: 100px}
+} */
 .bouncydancer{
-  border:20px solid royalblue;
-  border-radius:20px;
+  display:block;
+  box-sizing:border-box;
+  background: url("image/bouncydancer.gif");
+  background-size: cover;
+  width:100px;
+  height:150px;
   position:absolute;
 }
