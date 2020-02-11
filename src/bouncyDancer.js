@@ -1,4 +1,4 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var makeBouncyDancer = function(top, left, timeBetweenSteps) {
   // console.log('blinky', this);
   makeDancer.call(this, top, left, timeBetweenSteps);
 
@@ -8,10 +8,10 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // return this;
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeBouncyDancer.prototype = Object.create(makeDancer.prototype);
+makeBouncyDancer.prototype.constructor = makeBouncyDancer;
 
-makeBlinkyDancer.prototype.step = function() {
+makeBouncyDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
 
   var oldStep = makeDancer.prototype.step.bind(this);
@@ -24,4 +24,3 @@ makeBlinkyDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
-
