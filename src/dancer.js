@@ -36,9 +36,7 @@ makeDancer.prototype.setPosition = function(top, left) {
 };
 
 makeDancer.prototype.lineup = function() {
-  var styleSettings = {
-    top : screen.height * Math.random(),
-    left : 100
-  };
-  this.$node.css(styleSettings);
+  this.top = screen.height * 0.9 * Math.random();
+  this.left = 100;
+  this.setPosition(this.top, this.left);
 };

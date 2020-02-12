@@ -3,6 +3,8 @@ var makeHulkDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
 
   this.$node = $('<span class="hulkdancer"></span>');
+  this.setPosition(top, left);
+
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
