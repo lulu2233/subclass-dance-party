@@ -25,9 +25,9 @@ makeHulkDancer.prototype.step = function() {
   // other effects you can use on a jQuery-wrapped html tag.
 
   this.top += 5;
-  // if (this.top >= screen.height) {
-  //   return;
-  // }
-
+  if (this.top >= screen.height - 150) {
+    this.top = 0;
+  }
+  console.log('hulk dancer\'s position :  ' + this.top, this.left);
   this.setPosition(this.top, this.left);
 };
